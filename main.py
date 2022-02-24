@@ -5,11 +5,12 @@ from retrieve_data import retrieve_inserted_data
 
 # Attribute __name__ is set to __main__ to run the main program
 if __name__ == '__main__':
-    files = ['Bill567.json', 'Chase54.json', 'Blanch.json', 'Bob.json', 'Deedra511.json', 'Deena887.json', 'Gilma310.json', 'Gonzla.json', 'Hank.json']
+    json_data = []
+    files = ['Bill567.json', 'Chase54.json', 'Blanch.json', 'Bob.json']
     for file in files:
     # to read the json file
        with open(file, encoding='utf8') as json_file:
-            json_data = json.load(json_file)
+            json_data.append(json.load(json_file))
 
     # json data is normalized and filtered by calling this method, passing json_data as a parameter
     df = json_to_dataframe(json_data)
@@ -25,11 +26,12 @@ if __name__ == '__main__':
                            "entry.resource.name.family": "family_name", "entry.resource.name.given": "First_name",
                            "entry.resource.address.city": "city", "entry.resource.address.line": "address", "entry.resource.gender": "gender", "entry.resource.communication.language.coding.display": "Language"},
                   inplace=True)
+    insert = insert.drop_duplicates()
 
     # passing dataframe as parameter to insert the select columns into database
     insert_data(insert)
 
     # Method to retrieve inserted data from mysql database
-    print("test")
+
     retrieve_inserted_data()
 
