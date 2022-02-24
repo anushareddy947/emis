@@ -24,7 +24,7 @@ The main.py file which holds the normalized data into separate columns. I have r
 
 The selected file is stored in MySql database. So the retrived data in the form of CSV file. Conn.Cursor() is used in Insert_data file and retrived_data file to fetch the data stored in database. buffer() function is used to retrieve the data from each row into CSV format. The below picture shows the retrived data from the database.
 
-![Retrived data from DB](https://user-images.githubusercontent.com/81103191/155491555-0c4bd1ad-e6af-447e-b34b-e203b38f8d78.PNG)
+![Retrived data](https://user-images.githubusercontent.com/81103191/155558030-56a47cd9-f441-4e27-b13c-2ecaabfc58af.PNG)
 
 #Conclusion: Finally I could analyse the raw json file and convert it into the readable csv format using Pycharm and retrieve data from database that can be used for further pateint data analysis.
 
