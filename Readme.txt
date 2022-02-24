@@ -19,3 +19,4 @@
 
 #SETP 5: Finally retrieve the inserted data into a CSV file.
 #This method is stored in this Retrieve_data.py file. This file consists of the data, which is connected to a database, by executing the query the cursor will fetch the data in the database and buffer in each row and retrieve the data in CSV format. The below picture shows the inserted data in database.
+![Retrived data from DB](https://user-images.githubusercontent.com/81103191/155491555-0c4bd1ad-e6af-447e-b34b-e203b38f8d78.PNG)
