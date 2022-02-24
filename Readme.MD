@@ -1,25 +1,33 @@
-#The aim of the assessment is to convert the JSON file into a workable format such as CSV or excel sheet. The project has been divided into parts for a better understanding purpose.
+#The aim of the assessment is to convert the JSON file into a workable format such as CSV that can readily used for data analysis. My implementation has been divided into different procudural steps for the given dataset.
 
-#STEP1:  Initially, set a virtual environment, directory and created a project in PyCharm.
-#Use python -m venv myenv to create a virtual environment in your project containing a directory. Install all dependency modules available in requirements.txt by using pip install -r requirement.txt
-#Required packages are loaded and an attribute is set to run the main program and then loaded the JSON file to convert into data frames.
+#STEP1: Selection of Pycharm virtual enivronment for data conversion. processing
 
-#STEP2: Loading JSON file to read and convert to data frames.
-#Pandas data frame is an easy and readable way that normalizes the JSON data and converts it into data frames. However, converting files into data frames isn’t enough to handle errors. So, data has been normalised further.
+Initially, for implementation I have choose PyCharm and I have activated the virtual environment using python -m venv myenv. I have a created a directory named as project. Installed all dependency modules available in requirements.txt. All required packages are loaded and is set to run in the main program.
 
-#SETP 3: Converting data frames into CSV by normalising the data.
-#Data normalisation is done in a separate file called Normalize.py. Just json_normalise() works great to simple JASON file, but here the data is in nested form with list and dictionary. So, flatten function is used in implementing iterator in loops and converting nested data into separate columns and returning normalized data. The below picture shows normalised data from raw JSON file.
+#STEP2: Data Loading
+
+I have used list function to pull the raw JSON file to convert into data frame. I have create list to add mutiple files for further extensions. I have used pandas library to convert the json data into data frames, which is normalised and easily readable format. However, converting files into data frames isn’t enough to handle the real time errors. So, data has been normalised to reduce the data compression errors at this stage and the normalised data is executable in main.py().
+
+#Main.py: Main.py() is a starting function and this file is set to run the main program and holds JSON files that are normalized into readable format. Selected necessary fields from converted data frame and inserted into a variable. Rename the variable columns in a convenient way. The inserted data is connected to a database and returns retrieved data from the MySQL database. Separate files are created to write code inserted data and retrieve data.
+
+#STEP 3: Handling the data compression errors
+
+I have obsered that the converted data frame was having data compression errors. To handle this errors I have used normalisation further. Using the selected functions. Data normalisation is done in a separate file called Normalize.py which holds the main code in an understandable format. For handling low volumes of data jason_normalised( ) can be used.But the given jason file is complex and integrated with data in a nested form such lists and dictionaries. The flatten function() is used to implement iterations in loops and to convert nested data into seperate accessable columns and returns the normalized data. Below is the presentation of the normalized data.
 
 ![Normalized](https://user-images.githubusercontent.com/81103191/155490828-ab0174c7-5df5-484c-bd69-9c71321965e0.PNG)
 
-#Main.py: This file is set to run the main program and JSON files are loaded to read and normalized. Selected necessary fields from converted data frame and inserted into a variable. Rename the variable columns in a convenient way. The inserted data is connected to a database and returns retrieved data from the MySQL database. Separate files are created to write code inserted data and retrieve data.
+#STEP 4: Data preparation.
 
-#STEP 4: Selected fields of data are inserted into the database.
-#This file is called an instert_data.py, where connecting cursor to fetch the inserted data from database and filling the empty rows into 0 using fillna() function. Then create a variable to list the values in by iteration and commit the data.
+The main.py file which holds the normalized data into separate columns. I have renamed the selected columns headers into convenient labels which are important and necessary for data analysis. The fillna() function is used to fill the empty rows into 0.
 
-#SETP 5: Finally retrieve the inserted data into a CSV file.
-#This method is stored in this Retrieve_data.py file. This file consists of the data, which is connected to a database, by executing the query the cursor will fetch the data in the database and buffer in each row and retrieve the data in CSV format. The below picture shows the retrived data from the database.
+#STEP 5: MYsql Database
+
+The selected file is stored in MySql database. So the retrived data in the form of CSV file. Conn.Cursor() is used in Insert_data file and retrived_data file to fetch the data stored in database. buffer() function is used to retrieve the data from each row into CSV format. The below picture shows the retrived data from the database.
+
 ![Retrived data from DB](https://user-images.githubusercontent.com/81103191/155491555-0c4bd1ad-e6af-447e-b34b-e203b38f8d78.PNG)
 
+#Conclusion: Finally I could analyse the raw json file and convert it into the readable csv format using Pycharm and retrieve data from database that can be used for further pateint data analysis.
+
 FUTURE GOALS:
-# Raw data has been converted into workable format to analyse the data and provide better insights. Pandas data frame is most popular package which helps us for data conversion purpose. Data has been structured by normalising and flattening into multiple columns however, this isn't enough to analsye the data. The data should be accurate by balancing the missing values. My future goal is to explore different method to handle the large volume of complex data in less time frame by designing a user interface to upload the json file and convert into workable format. This type of can be modelled in relational database managemet and no SQL database. I'll work on storing the data and retrive from no SQL database for example MongoDB. 
+
+#My future goal is to explore on new method to handle the large volume of complex data and process quickly in less time frame by designing a user interface to upload the json file and convert into workable format. I wish to explor in creating user interface dashboard which displays stack of real time patient data. To implement the data structure for quick data cleaning procedures using wide range of functions to save time and provide efficent data. This type of data can be modelled in relational database managemet and no SQL database. I'll work on storing the data and retrive from no SQL database for example MongoDB and docker the file in container.
