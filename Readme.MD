@@ -22,7 +22,7 @@ The main.py file which holds the normalized data into separate columns. I have r
 
 #STEP 5: MYsql Database
 
-The selected file is stored in MySql database. So the retrived data in the form of CSV file. Conn.Cursor() is used in Insert_data file and retrived_data file to fetch the data stored in database. buffer() function is used to retrieve the data from each row into CSV format. The below picture shows the retrived data from the database.
+The selected file is stored in MySql database. So the retrived data in the form of CSV file. Conn.Cursor() is used in Insert_data file and retrived_data file to fetch the data stored in database. buffer() function is used to retrieve the data from each row into CSV format. The below picture shows the retrived data in tabular format in database.
 
 ![Retrived data](https://user-images.githubusercontent.com/81103191/155558030-56a47cd9-f441-4e27-b13c-2ecaabfc58af.PNG)
 
