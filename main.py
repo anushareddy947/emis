@@ -32,6 +32,6 @@ if __name__ == '__main__':
     insert_data(insert)
 
     # Method to retrieve inserted data from mysql database
-    print("test")
+
     retrieve_inserted_data()
 
