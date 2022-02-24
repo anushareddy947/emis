@@ -1,10 +1,12 @@
-# For more information, please refer to https://aka.ms/vscode-docker-python
-FROM python:3.9
-ENV PYTHONDONTWRITEBYTECODE=1
 
-WORKDIR /app
+FROM  python:3.8-rc-slim-buster
 
-RUN pip install requirements.txt
-# During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
-CMD ["python", "main.py"]
+ADD main.py
+    docker build -t getting-started .
+RUN pip install requests requirements.txt
+
+CMD ["python:3","./main.py"]
+
+
+
 
