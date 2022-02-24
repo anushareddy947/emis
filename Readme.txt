@@ -10,7 +10,7 @@
 #SETP 3: Converting data frames into CSV by normalising the data.
 #Data normalisation is done in a separate file called Normalize.py. Just json_normalise() works great to simple JASON file, but here the data is in nested form with list and dictionary. So, flatten function is used in implementing iterator in loops and converting nested data into separate columns and returning normalized data. The below picture shows normalised data.
 
-
+![Normalized](https://user-images.githubusercontent.com/81103191/155490828-ab0174c7-5df5-484c-bd69-9c71321965e0.PNG)
 
 #Main.py: This file is set to run the main program and JSON files are loaded to read and normalized. Selected necessary fields from converted data frame and inserted into a variable. Rename the variable columns in a convenient way. The inserted data is connected to a database and returns retrieved data from the MySQL database. Separate files are created to write code inserted data and retrieve data.
 
