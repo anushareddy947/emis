@@ -8,7 +8,7 @@
 #Pandas data frame is an easy and readable way that normalizes the JSON data and converts it into data frames. However, converting files into data frames isn’t enough to handle errors. So, data has been normalised further.
 
 #SETP 3: Converting data frames into CSV by normalising the data.
-#Data normalisation is done in a separate file called Normalize.py. Just json_normalise() works great to simple JASON file, but here the data is in nested form with list and dictionary. So, flatten function is used in implementing iterator in loops and converting nested data into separate columns and returning normalized data. The below picture shows normalised data.
+#Data normalisation is done in a separate file called Normalize.py. Just json_normalise() works great to simple JASON file, but here the data is in nested form with list and dictionary. So, flatten function is used in implementing iterator in loops and converting nested data into separate columns and returning normalized data. The below picture shows normalised data from raw JSON file.
 
 ![Normalized](https://user-images.githubusercontent.com/81103191/155490828-ab0174c7-5df5-484c-bd69-9c71321965e0.PNG)
 
@@ -18,5 +18,8 @@
 #This file is called an instert_data.py, where connecting cursor to fetch the inserted data from database and filling the empty rows into 0 using fillna() function. Then create a variable to list the values in by iteration and commit the data.
 
 #SETP 5: Finally retrieve the inserted data into a CSV file.
-#This method is stored in this Retrieve_data.py file. This file consists of the data, which is connected to a database, by executing the query the cursor will fetch the data in the database and buffer in each row and retrieve the data in CSV format. The below picture shows the inserted data in database.
+#This method is stored in this Retrieve_data.py file. This file consists of the data, which is connected to a database, by executing the query the cursor will fetch the data in the database and buffer in each row and retrieve the data in CSV format. The below picture shows the retrived data from the database.
 ![Retrived data from DB](https://user-images.githubusercontent.com/81103191/155491555-0c4bd1ad-e6af-447e-b34b-e203b38f8d78.PNG)
+
+FUTURE GOALS:
+# Raw data has been converted into workable format to analyse the data and provide better insights. Pandas data frame is most popular package which helps us for data conversion purpose. Data has been structured by normalising and flattening into multiple columns however, this isn't enough to analsye the data. The data should be accurate by balancing the missing values. My future goal is to explore different method to handle the large volume of complex data in less time frame by designing a user interface to upload the json file and convert into workable format. This type of can be modelled in relational database managemet and no SQL database. I'll work on storing the data and retrive from no SQL database for example MongoDB. 
