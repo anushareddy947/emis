@@ -33,4 +33,4 @@ Retrived data as showing in console.
 
 FUTURE GOALS:
 
-#My future goal is to explore on new method to handle the large volume of complex data and process quickly in less time frame by designing a user interface to upload the json file and convert into workable format. I wish to explor in creating user interface dashboard which displays stack of real time patient data. To implement the data structure for quick data cleaning procedures using wide range of functions to save time and provide efficent data. This type of data can be modelled in relational database managemet and no SQL database. I'll work on storing the data and retrive from no SQL database for example MongoDB and docker the file in container.
+#My future goal is to explore on new method to handle the large volume of complex data and process quickly in less time frame by designing a user interface to upload the json file and create a dashboard which displays the patient data in a meaning full way. I'll create a NoSql database to store and retrieve data which will save time. Within less time frame we can process the data quickly.
