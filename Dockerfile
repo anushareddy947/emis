@@ -1,12 +1,13 @@
+FROM python:3.10
 
-FROM  python:3.8-rc-slim-buster
+WORKDIR ./EMIS_Project
 
-ADD main.py
+COPY requirements.txt .
 
-RUN pip install requests requirements.txt
+RUN pip install -r requirements.txt 
 
-CMD ["python:3","./main.py"]
+COPY ./ ./
 
-
+CMD ["python", "./main.py"]
 
 
