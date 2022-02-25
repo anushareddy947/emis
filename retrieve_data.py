@@ -1,6 +1,7 @@
 from db_connection import conn
 import pandas as pd
 
+
 def retrieve_inserted_data():
     mycursor = conn.cursor(buffered=True)
     query = "SELECT * FROM patient_data ORDER BY id DESC LIMIT 5"
