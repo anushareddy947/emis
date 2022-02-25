@@ -39,8 +39,8 @@ if __name__ == '__main__':
 
     # passing dataframe as parameter to insert the select columns into database
     insert_data(insert)
-
-    # Method to retrieve inserted data from mysql database
+    # Method to retrieve inserte
+    # d data from mysql database
 
     retrieve_inserted_data()
 
