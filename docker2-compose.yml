@@ -7,15 +7,11 @@ services:
       MYSQL_ROOT_PASSWORD: 'abc'
       database: 'json_data'
     ports:
-      - '3308:3306'
-
+      - '3309:3306'
   phpmyadmin:
     image: phpmyadmin
-    container_name: db
     restart: always
     ports:
-      - '8808:80'
+      - 8080:80
     environment:
-      MYSQL_ROOT_PASSWORD: 'abc'
-      PMA_ARBITRARY=1
-      
+      - PMA_ARBITRARY=1

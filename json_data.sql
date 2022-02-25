@@ -34,7 +34,7 @@ CREATE TABLE `patient_data` (
   `identifier_value` varchar(500) DEFAULT NULL,
   `profile` varchar(500) DEFAULT NULL,
   `family_name` varchar(200) DEFAULT NULL,
-  'gender' int(11) DEFAULT NULL
+  'gender' varchar(15) DEFAULT NULL
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
