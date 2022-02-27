@@ -22,12 +22,15 @@ The main.py file which holds the normalized data into separate columns. I have r
 
 #STEP 5: MYsql Database
 
-The selected file is stored in MySql database. So the retrived data in the form of CSV file. Conn.Cursor() is used in Insert_data file and retrived_data file to fetch the data stored in database. buffer() function is used to retrieve the data from each row into CSV format. The below picture shows the retrived data from the database.
+The selected file is stored in MySql database. So the retrived data in the form of CSV file. Conn.Cursor() is used in Insert_data file and retrived_data file to fetch the data stored in database. buffer() function is used to retrieve the data from each row into CSV format. The below picture shows the retrived data in tabular format in database.
 
-![Retrived data from DB](https://user-images.githubusercontent.com/81103191/155491555-0c4bd1ad-e6af-447e-b34b-e203b38f8d78.PNG)
+![Filtered data](https://user-images.githubusercontent.com/81103191/155578992-e465cd99-a37a-4adf-9fe4-efa2b93443be.PNG) 
+
+Retrived data as showing in console.
+![console](https://user-images.githubusercontent.com/81103191/155579492-5ec52506-62b5-4cfb-9d8d-5a3ab8cb2288.PNG)
 
 #Conclusion: Finally I could analyse the raw json file and convert it into the readable csv format using Pycharm and retrieve data from database that can be used for further pateint data analysis.
 
 FUTURE GOALS:
 
-#My future goal is to explore on new method to handle the large volume of complex data and process quickly in less time frame by designing a user interface to upload the json file and convert into workable format. I wish to explor in creating user interface dashboard which displays stack of real time patient data. To implement the data structure for quick data cleaning procedures using wide range of functions to save time and provide efficent data. This type of data can be modelled in relational database managemet and no SQL database. I'll work on storing the data and retrive from no SQL database for example MongoDB and docker the file in container.
+#My future goal is to explore on new method to handle the large volume of complex data and process quickly in less time frame by designing a user interface to upload the json file and create a dashboard which displays the patient data in a meaning full way. I'll create a NoSql database to store and retrieve data which will save time. Within less time frame we can process the data quickly.
