@@ -25,17 +25,15 @@ if __name__ == '__main__':
 
     # selecting only few fields from dataframe into the variable insert as dataframe
 
-    insert = df[['resourceType', 'entry.resource.resourceType', 'entry.resource.name.given', 'entry.resource.name.family', 'entry.resource.address.city', 'entry.resource.address.line', 'entry.resource.gender', 'entry.resource.communication.language.coding.display']]
+    insert = df[['resourceType', 'entry.resource.resourceType', 'entry.resource.name.given', 'entry.resource.name.family','entry.resource.telecom.value', 'entry.resource.address.city', 'entry.resource.address.line', 'entry.resource.gender', 'entry.resource.communication.language.coding.display', 'entry.resource.address.postalCode', 'entry.resource.address.state']]
 
     # renaming columns of insert dataframe
     insert.rename(columns={"resourceType": "resource_type", "entry.resource.resourceType": "entry_resource_type",
-                           "entry.resource.name.family": "family_name", "entry.resource.name.given": "First_name",
-                           "entry.resource.address.city": "city", "entry.resource.address.line": "address", "entry.resource.gender": "gender", "entry.resource.communication.language.coding.display": "Language"},
+                           "entry.resource.name.family": "family_name", "entry.resource.name.given": "First_name", "entry.resource.telecom.value": "phone_number",
+                           "entry.resource.address.city": "city", "entry.resource.address.line": "address", "entry.resource.gender": "gender", "entry.resource.communication.language.coding.display": "Language", "entry.resource.address.postalCode": "postalcode", "entry.resource.address.state": "state"},
                   inplace=True)
 
-
     insert = insert.drop_duplicates()
-
 
     # passing dataframe as parameter to insert the select columns into database
     insert_data(insert)
