@@ -1,13 +1,26 @@
 version: '3.4'
 services:
-  db:
-    build: .
+  mysqldb:
     image: mysql:8.0.2
+    container_name: mysqldb
+    entrypoint:
+      sh -c "
+        echo 'CREATE DATABASE IF NOT EXISTS json_data;' > /docker-entrypoint-initdb.d/init.sql; 
+        echo 'use json_data' >> /docker-entrypoint-initdb.d/init.sql;
+        echo 'CREATE TABLE patient_data (id INT(11) AUTO_INCREMENT PRIMARY KEY, resource_type VARCHAR(255), entry_resource_type VARCHAR(255), family_name VARCHAR(200),First_name VARCHAR(200), phone_number VARCHAR(100), gender VARCHAR(15), Language VARCHAR(200),address VARCHAR(150),city VARCHAR(200), postalcode INT(100));' >> /docker-entrypoint-initdb.d/init.sql;
+        /usr/local/bin/docker-entrypoint.sh --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci"
     environment:
-      MYSQL_ROOT_PASSWORD: 'abc'
+      MYSQL_ROOT_PASSWORD: 'root'
       database: 'json_data'
+    healthcheck:
+      test: "/usr/bin/mysql --user=root --password=root --execute \"SHOW DATABASES;\""
+      interval: 2s
+      timeout: 20s
+      retries: 10
+    expose:
+      - '3306'
     ports:
-      - '3308:3306'
+      - '3306:3306'
 
   phpmyadmin:
     image: phpmyadmin
@@ -16,6 +29,12 @@ services:
     ports:
       - '8808:80'
     environment:
-      MYSQL_ROOT_PASSWORD: 'abc'
-      PMA_ARBITRARY=1
-      
+      MYSQL_ROOT_PASSWORD: 'root'
+      PMA_ARBITRARY: 1
+
+  app:
+    build: .
+    container_name: emis
+    depends_on:
+       mysqldb:
+        condition: service_healthy

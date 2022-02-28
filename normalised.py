@@ -22,7 +22,7 @@ def flatten_list(data):
             yield elem
 
 
-# this method is used to return normarlized dataframe
+# this method is used to return normalised dataframe
 def json_to_dataframe(data_in):
     def flatten_json(data, prev_heading=''):
         if isinstance(data, dict):
