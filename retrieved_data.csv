@@ -1,6 +1,6 @@
-,id,resource_type,entry_resource_type,family_name,First_name,city,address,gender,Language
-0,54,Bundle,Patient,Chase54,Crooks415,Franklin,818 Will Village,male,English
-1,53,Bundle,Patient,Bob965,Mohr916,Arlington,531 Dare Tunnel,male,English
-2,52,Bundle,Patient,Blanch844,Rowe323,Sandwich,654 Metz Path,female,English
-3,51,Bundle,Patient,Blanch844,Kuhlman484,Sandwich,654 Metz Path,female,English
-4,50,Bundle,Provenance,0,0,0,0,0,0
+,id,resource_type,entry_resource_type,family_name,First_name,phone_number,gender,Language,address,city,postalcode
+0,18,Bundle,Patient,Chase54,Crooks415,555,male,English,818 Will Village,Franklin,0
+1,17,Bundle,Patient,Bob965,Mohr916,555,male,English,531 Dare Tunnel,Arlington,2476
+2,16,Bundle,Patient,Blanch844,Rowe323,555,female,English,654 Metz Path,Sandwich,0
+3,15,Bundle,Patient,Blanch844,Kuhlman484,555,female,English,654 Metz Path,Sandwich,0
+4,14,Bundle,Provenance,0,0,0,0,0,0,0,0
