@@ -4,9 +4,9 @@ from normalised import json_to_dataframe
 from retrieve_data import retrieve_inserted_data
 import os
 
-# Attribute __name__ is set to __main__ to run the main program
+## Attribute __name__ is set to __main__ to run the main program
 if __name__ == '__main__':
-
+## Loading source from the path. We can also use alternative method using API pull request method to load the files.
     #files = ['Bill567.json', 'Chase54.json', 'Blanch.json', 'Bob.json']
     json_data = []
     path = r'/'
